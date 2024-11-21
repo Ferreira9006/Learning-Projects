@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using BusinessLayer;
 using LoginSystem.Properties;
 
@@ -19,6 +20,7 @@ namespace LoginSystem
         public FormInicial()
         {
             InitializeComponent();
+
         }
 
         #endregion
@@ -57,6 +59,9 @@ namespace LoginSystem
 
                     account.newAuth(username, password);
 
+                    this.inputUsernameLabel.Text = username;
+                    this.inputPasswordLabel.Text = password;
+
                     if (account.checkAuth())
                     {
                         this.loginStatusLabel.Text = "Login successful!";
@@ -77,6 +82,20 @@ namespace LoginSystem
             }
         }
 
+        private void InitResources()
+        {
+            this.usernameLabel.Text = Resources.USERNAME_LABEL;
+            this.passwordLabel.Text = Resources.PASSWORD_LABEL;
+            this.loginButton.Text = Resources.LOGIN_BUTTON;
+            this.loginStatusLabel.Text = Resources.LOGIN_STATUS_LABEL;
+
+            this.showUsernameLabel.Text = Resources.USERNAME_LABEL;
+            this.showPasswordLabel.Text = Resources.PASSWORD_LABEL;
+
+            this.inputUsernameLabel.Text = "";
+            this.inputPasswordLabel.Text = "";
+        }
+
         #endregion
 
         #region Events
@@ -85,7 +104,12 @@ namespace LoginSystem
         {
             this.Login();
         }
-        
+
+        private void FormInicial_Load(object sender, EventArgs e)
+        {
+            this.InitResources();
+        }
+
         #endregion
     }
 }

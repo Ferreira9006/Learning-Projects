@@ -68,5 +68,41 @@ namespace LoginSystem.Properties {
                 return ResourceManager.GetString("EMPTY_DATA_FIELDS_ERROR", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        internal static string LOGIN_BUTTON {
+            get {
+                return ResourceManager.GetString("LOGIN_BUTTON", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login Status: .
+        /// </summary>
+        internal static string LOGIN_STATUS_LABEL {
+            get {
+                return ResourceManager.GetString("LOGIN_STATUS_LABEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password: .
+        /// </summary>
+        internal static string PASSWORD_LABEL {
+            get {
+                return ResourceManager.GetString("PASSWORD_LABEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Username: .
+        /// </summary>
+        internal static string USERNAME_LABEL {
+            get {
+                return ResourceManager.GetString("USERNAME_LABEL", resourceCulture);
+            }
+        }
     }
 }
